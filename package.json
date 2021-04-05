@@ -1,0 +1,11 @@
+{
+  "name": "bookmycare-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hkgnp/bookmycare-backend",
+  "author": "hkgnp <ben@pngs.cc>",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
+}
