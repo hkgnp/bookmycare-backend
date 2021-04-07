@@ -78,6 +78,7 @@ const landingRoutes = require('./routes/landingRoutes');
   app.use('/', landingRoutes);
 })();
 
+// Set server port
 const portNumber = 7000;
 app.listen(process.env.PORT || portNumber, () =>
   console.log('Server is running on port ' + portNumber)
