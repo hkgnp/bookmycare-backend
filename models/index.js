@@ -77,4 +77,5 @@ module.exports = {
   Booking,
   User,
   BlacklistedToken,
+  CartItem,
 };
