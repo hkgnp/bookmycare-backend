@@ -1,0 +1,44 @@
+{{#extends base}}
+
+{{#block 'title'}} All Services {{/block}}
+
+{{#block 'content'}}
+
+<div class="table-responsive table-dark">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Postal Code</th>
+                <th>Description</th>
+                <th>Religion</th>
+                <th>Halal</th>
+                <th>Cost</th>
+                <th>Subsidies</th>
+            </tr>
+        </thead>
+    <tbody>
+        {{#each services}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.address}}</td>
+            <td>{{this.postal_code}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.religion}}</td>
+            <td>{{this.halal}}</td>
+            <td>{{this.cost}}</td>
+            <td>{{this.subsidies}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+
+    </table>
+
+
+</div>
+
+{{/block}}
+
+{{/extends}}

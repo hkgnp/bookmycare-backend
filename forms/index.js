@@ -30,7 +30,67 @@ const bootstrapField = function (name, object) {
 };
 
 const createServiceForm = () => {
-  return forms.create({});
+  return forms.create({
+    name: fields.string({
+      required: true,
+      errorAfterField: true,
+      cssClass: {
+        label: ['form-label'],
+      },
+    }),
+    cost: fields.string({
+      required: true,
+      errorAfterField: true,
+      cssClass: {
+        label: ['form-label'],
+      },
+      validators: [validators.integer()],
+    }),
+    subsidies: fields.boolean({
+      required: true,
+      errorAfterField: true,
+      cssClass: {
+        label: ['form-label'],
+      },
+      widgets: widgets.text('Yes'),
+    }),
+    address: fields.string({
+      required: true,
+      errorAfterField: true,
+      cssClass: {
+        label: ['form-label'],
+      },
+    }),
+    postal_code: fields.string({
+      required: true,
+      errorAfterField: true,
+      cssClass: {
+        label: ['form-label'],
+      },
+      validators: [validators.integer()],
+    }),
+    description: fields.string({
+      required: true,
+      errorAfterField: true,
+      cssClass: {
+        label: ['form-label'],
+      },
+    }),
+    religion: fields.string({
+      required: true,
+      errorAfterField: true,
+      cssClass: {
+        label: ['form-label'],
+      },
+    }),
+    halal: fields.boolean({
+      required: true,
+      errorAfterField: true,
+      cssClass: {
+        label: ['form-label'],
+      },
+    }),
+  });
 };
 
 module.exports = { bootstrapField, createServiceForm };

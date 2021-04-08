@@ -72,10 +72,12 @@ app.use(
 
 // Routes
 const landingRoutes = require('./routes/landingRoutes');
+const serviceRoutes = require('./routes/servicesRoutes');
 
 // Main function
 (() => {
   app.use('/', landingRoutes);
+  app.use('/services', serviceRoutes);
 })();
 
 // Set server port

@@ -1,0 +1,15 @@
+{{#extends 'base'}}
+
+{{#block 'title'}} Create Service {{/block}}
+
+{{#block 'content'}}
+<h1>Create Service</h1>
+
+<form method = "POST" class="form-dark">
+
+{{{form}}}
+<input type="submit" class="btn btn-primary mt-3 mb-5" value="Create Service" /><a href="/services" class="btn btn-danger mt-3 mb-5 ml-2">Back</a>
+</form>
+{{/block}}
+
+{{/extends}}
