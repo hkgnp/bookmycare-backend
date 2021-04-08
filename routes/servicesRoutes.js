@@ -11,8 +11,6 @@ const { bootstrapField, createServiceForm } = require('../forms');
 const getServiceDataLayer = require('../dal/dal_services');
 
 router.get('/', async (req, res) => {
-  const allOrganisations = await getServiceDataLayer.getAllOrganisations();
-
   let services = await Service.collection().fetch({
     withRelated: ['organisation'],
   });
