@@ -15,7 +15,7 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-  return db.addColumn('services', 'org_id', {
+  return db.addColumn('services', 'organisation_id', {
     type: 'int',
     unsigned: true,
     notNull: true,

@@ -1,4 +1,4 @@
-{{#extends base}}
+{{#extends 'base'}}
 
 {{#block 'title'}} All Services {{/block}}
 
@@ -8,6 +8,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Organisation</th>
                 <th>Name</th>
                 <th>Address</th>
                 <th>Postal Code</th>
@@ -21,6 +22,7 @@
     <tbody>
         {{#each services}}
         <tr>
+            <td>{{this.organisation.name}}</td>
             <td>{{this.name}}</td>
             <td>{{this.address}}</td>
             <td>{{this.postal_code}}</td>

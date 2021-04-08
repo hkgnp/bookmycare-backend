@@ -13,9 +13,12 @@ const getServiceDataLayer = require('../dal/dal_services');
 router.get('/', async (req, res) => {
   const allOrganisations = await getServiceDataLayer.getAllOrganisations();
 
-  res.render('/services/index', {
+  let services = await Service.collection().fetch({
+    withRelated: ['organisation'],
+  });
+
+  res.render('services/index', {
     services: services.toJSON(),
-    form: form.toHTML(bootstrapField),
   });
 });
 
