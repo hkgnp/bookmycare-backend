@@ -15,15 +15,19 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-  return db.createTable('organisations', {
-    id: {
-      type: 'int',
-      primaryKey: true,
-      autoIncrement: true,
-      notNull: true,
-      unsigned: true,
+  return db.addColumn('slots', 'service_id', {
+    type: 'int',
+    unsigned: true,
+    notNull: true,
+    foreignKey: {
+      name: 'slots_services_fk',
+      table: 'services',
+      rules: {
+        onDelete: 'cascade',
+        onUpdate: 'restrict',
+      },
+      mapping: 'id',
     },
-    name: { type: 'string', length: 500 },
   });
 };
 

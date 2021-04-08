@@ -16,7 +16,7 @@ exports.setup = function (options, seedLink) {
 
 exports.up = function (db) {
   return db.createTable('services', {
-    id: { type: 'int', primaryKey: true, autoIncrement: true },
+    id: { type: 'int', unsigned: true, primaryKey: true, autoIncrement: true },
     name: { type: 'string', length: 300 },
     subsidies: { type: 'boolean' },
     cost: { type: 'int' },

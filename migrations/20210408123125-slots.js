@@ -15,7 +15,7 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-  return db.createTable('organisations', {
+  return db.createTable('slots', {
     id: {
       type: 'int',
       primaryKey: true,
@@ -23,7 +23,7 @@ exports.up = function (db) {
       notNull: true,
       unsigned: true,
     },
-    name: { type: 'string', length: 500 },
+    week: { type: 'int' },
   });
 };
 

@@ -15,7 +15,7 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-  return db.createTable('organisations', {
+  return db.createTable('bookings', {
     id: {
       type: 'int',
       primaryKey: true,
@@ -23,7 +23,11 @@ exports.up = function (db) {
       notNull: true,
       unsigned: true,
     },
-    name: { type: 'string', length: 500 },
+    booking_date: { type: 'datetime' },
+    required_weeks: { type: 'int' },
+    payment_date: { type: 'date' },
+    payment_type: { type: 'string', length: 10 },
+    payment_status: { type: 'string', length: 30 },
   });
 };
 

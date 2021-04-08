@@ -15,7 +15,7 @@ exports.setup = function (options, seedLink) {
 };
 
 exports.up = function (db) {
-  return db.createTable('organisations', {
+  return db.createTable('patients', {
     id: {
       type: 'int',
       primaryKey: true,
@@ -23,7 +23,10 @@ exports.up = function (db) {
       notNull: true,
       unsigned: true,
     },
-    name: { type: 'string', length: 500 },
+    patient_name: { type: 'string', length: 500 },
+    patient_hrn: { type: 'string', length: 30 },
+    patient_contact: { type: 'string', length: 15 },
+    patient_nok_name: { type: 'string', length: 15 },
   });
 };
 
