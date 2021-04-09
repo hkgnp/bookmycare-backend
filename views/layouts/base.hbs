@@ -60,11 +60,19 @@
               <a class="nav-link" href="/products/create">Setup Service</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact-us">Contact System Administrators</a>
+              <a class="nav-link" href="/products/create">All Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact-us"
+                >Contact System Administrators</a
+              >
             </li>
           </ul>
           {{#if user}}
-          <a href="/users/profile" class="btn btn-outline-warning btn-sm my-2 mr-2">
+          <a
+            href="/users/profile"
+            class="btn btn-outline-warning btn-sm my-2 mr-2"
+          >
             {{ user.username }}
           </a>
           <a href="/users/logout" class="btn btn-danger btn-sm my-2 my-0">
